@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    {% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}"/>
+    {% endif %}
+    {% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}"/>
+    {% endif %}
+
+    {% if current_page %}
+        <link rel="canonical" href="{{ current_page.url }}"/>
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ theme_url }}/css/fontello.css" type="text/css"/>
+</head>
+<body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
+
+{{ include('navbar.twig') }}
+
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <aside class="is-medium menu">
+
+                    <ul class="menu-list">
+                        <li><a href="#about" class=""><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#start" class=""><i class="fas fa-play"></i> Getting Started</a></li>
+                        <li><a href="https://unicate.ch" class=""><i class="fas fa-star"></i> Demo</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        &nbsp;&nbsp;Bar...
+                    </p>
+                    <p>
+
+                    </p>
+                    <ul class="">
+                        <li><a href="https://getlaminas.org" target="_blank" class="tag is-white is-medium">Laminas
+                                Project</a></li>
+                        <li><a href="https://thephpleague.com" target="_blank" class="tag is-white is-medium">The PHP
+                                League</a></li>
+                        <li><a href="https://symfony.com" target="_blank" class="tag is-white is-medium">Simfony</a>
+                        </li>
+                        <li><a href="https://php-di.org" target="_blank" class="tag is-white is-medium">PHP-DI</a></li>
+                        <li><a href="https://medoo.in" target="_blank" class="tag is-white is-medium">Medoo</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-9">
+                <div id="about" class="content is-medium">
+                    <div class="box">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ include('footer.twig') }}
+
+</body>
+</html>

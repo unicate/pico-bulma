@@ -1,0 +1,19 @@
+# Linux
+*~
+*.swp
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Mac OS X
+.DS_Store
+.idea
+._*
+
+# Composer
+/composer.phar
+/vendor
+
+# Node
+/node_modules

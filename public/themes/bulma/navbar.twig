@@ -1,0 +1,23 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        {% if pages["_meta"].meta.logo %}
+            <a class="navbar-item" href="{{ "index"|link }}">
+                <img src="{{ pages["_meta"].meta.logo|url }}" alt=""/>
+            </a>
+        {% endif %}
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>

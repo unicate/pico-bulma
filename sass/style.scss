@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@import "variables";
+
+// Update Bulma's global variables
+$family-sans-serif: sans-serif;
+$grey-dark: $grey-dark;
+$grey-light: $beige-lighter;
+$primary: $blue;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$box-background-color : $white;
+$box-color : #4a4a4a;
+
+$input-border-color : $grey-light;
+
+.hero.is-primary {
+  background: linear-gradient(to top left, $blue 10%, $grey-light);
+}
+
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/bulma/bulma.sass";
+
+.menu-list li a {
+  background: $primary;
+  color: $white;
+}
+.menu-list li a:hover {
+  background: $grey-dark;
+  color: $white;
+}
+
+.menu li {
+  margin-bottom: 5px;
+}
+.content h1, .content h2, .content h3 {
+  color: $primary;
+}
