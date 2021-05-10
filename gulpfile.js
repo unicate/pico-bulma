@@ -2,6 +2,12 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-dart-sass');
+const zip = require('gulp-zip');
+const del = require('del');
+
+gulp.task('clean', function () {
+    return del(['./dist/**']);
+});
 
 gulp.task('bulma-theme-sass', function () {
     return gulp.src('./sass/**/*.scss')
@@ -9,10 +15,15 @@ gulp.task('bulma-theme-sass', function () {
         .pipe(gulp.dest('./public/themes/bulma/css'));
 });
 
+gulp.task('bulma-theme-dist', function () {
+    return gulp.src('./public/themes/bulma/**/*')
+        .pipe(zip('bulma-theme.zip'))
+        .pipe(gulp.dest('dist'))
+});
 
-function defaultTask(cb) {
-    console.log("Usage: gulp [clean | build | js | css | scss | deploy | config]");
+exports.default = (cb) => {
+    console.log("Usage: gulp [clean | build | bulma-theme-sass | bulma-theme-dist]");
     cb();
-}
+};
 
-exports.default = defaultTask
+exports.build = gulp.series('clean', 'bulma-theme-sass', 'bulma-theme-dist');

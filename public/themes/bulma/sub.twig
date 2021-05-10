@@ -17,7 +17,7 @@
     {% endif %}
 
     <link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css"/>
-    <link rel="stylesheet" href="{{ theme_url }}/css/fontello.css" type="text/css"/>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23264d73%22></rect><path d=%22M71.14 23.44Q72.63 23.44 73.27 24.12Q73.91 24.80 73.91 26.42L73.91 26.42Q73.91 28.05 73.27 28.73Q72.63 29.41 71.14 29.41L71.14 29.41L68.41 29.41L68.41 58.33Q68.41 67.51 63.60 72.04Q58.79 76.56 50 76.56L50 76.56Q41.21 76.56 36.40 72.04Q31.59 67.51 31.59 58.33L31.59 58.33L31.59 29.41L28.86 29.41Q27.37 29.41 26.73 28.73Q26.09 28.05 26.09 26.42L26.09 26.42Q26.09 24.80 26.73 24.12Q27.37 23.44 28.86 23.44L28.86 23.44L43.10 23.44Q44.59 23.44 45.23 24.12Q45.87 24.80 45.87 26.42L45.87 26.42Q45.87 28.05 45.23 28.73Q44.59 29.41 43.10 29.41L43.10 29.41L38.18 29.41L38.18 57.45Q38.18 64.17 41.04 67.12Q43.89 70.06 50 70.06L50 70.06Q56.11 70.06 58.96 67.12Q61.82 64.17 61.82 57.45L61.82 57.45L61.82 29.41L56.90 29.41Q55.41 29.41 54.77 28.73Q54.13 28.05 54.13 26.42L54.13 26.42Q54.13 24.80 54.77 24.12Q55.41 23.44 56.90 23.44L56.90 23.44L71.14 23.44Z%22 fill=%22%23fff%22></path></svg>" />
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
 
@@ -65,5 +65,6 @@
 
 {{ include('footer.twig') }}
 
+<script src="{{ theme_url }}/js/bulma.js" type="text/javascript"></script>
 </body>
 </html>
