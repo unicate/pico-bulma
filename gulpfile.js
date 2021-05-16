@@ -17,7 +17,7 @@ gulp.task('bulma-theme-sass', function () {
 
 gulp.task('bulma-theme-dist', function () {
     return gulp.src('./public/themes/bulma/**/*')
-        .pipe(zip('bulma-theme.zip'))
+        .pipe(zip('bulma.zip'))
         .pipe(gulp.dest('dist'))
 });
 

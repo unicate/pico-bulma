@@ -27,7 +27,7 @@ It can be used as foundation to build your own customized Bulma themes for Pico 
 
 Just download the zip file in the **dist** directory.
 
-[Download](./dist/bulma-theme.zip)
+[Download](./dist/bulma.zip)
 
 Unzip and copy the complete **bulma** folder into the **public/themes** directory.
 
