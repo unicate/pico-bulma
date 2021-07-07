@@ -26,9 +26,15 @@
 - Extract sample-content to your content folder.
 - Modify your config.yml. Set **theme: bulma**.
 
+config.yml
 ```
 theme: bulma
 ```
+
+File structure:
+- themes
+  - bulma
+  - default
 
 You will find more detailed information in the Pico CMS [documentation](https://picocms.org/docs/#themes).
 
@@ -42,7 +48,7 @@ npm install
 ```
 
 - To modify colors and styles please have a look at the **sass** directory.
-- To modify the layout, check out the **.twig** files in **public/themes/bulma**
+- To modify the layout, check out the **.twig** files in **themes/bulma**
 - The layout is split into the following files:
   - index.twig (main template)
   - sub.twig (sub or detail page)
