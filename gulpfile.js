@@ -12,11 +12,11 @@ gulp.task('clean', function () {
 gulp.task('bulma-theme-sass', function () {
     return gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/themes/bulma/css'));
+        .pipe(gulp.dest('./themes/bulma/css'));
 });
 
 gulp.task('bulma-theme-dist', function () {
-    return gulp.src('./public/themes/bulma/**/*')
+    return gulp.src('./themes/bulma/**/*')
         .pipe(zip('bulma.zip'))
         .pipe(gulp.dest('dist'))
 });

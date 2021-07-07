@@ -1,19 +1,15 @@
-[screen1]: public/assets/screen1.png
-[screen2]: public/assets/screen2.png
+[screen1]: preview/screen1.png
+[screen2]: preview/screen2.png
 
 
 # Pico Bulma
 
-> A lightweight [Bulma](https://bulma.io/) theme and starter project for [Pico CMS](https://picocms.org/).
+> A lightweight [Bulma](https://bulma.io/) theme for [Pico CMS](https://picocms.org/).
 
-## What is it and what's included?
-
-This project basically provides a Bulma-Theme and starter project for Pico CMS.
-It can be used as foundation to build your own customized Bulma themes for Pico CMS.
+## What's included?
 
 - [Bulma](https://bulma.io/) is a modern CSS framework that just works.
 - Icons from [Fontawesome-free](https://fontawesome.com/icons?m=free) are included and ready to use.
-- [Pico CMS](https://picocms.org/) is a simple and fast flat file CMS.
 - You can build your own themes with [Gulp](https://gulpjs.com/).  
 
 
@@ -25,34 +21,16 @@ It can be used as foundation to build your own customized Bulma themes for Pico 
 
 ## Download & Install Theme
 
-Just download the zip file in the **dist** directory.
+- Download repo.
+- Extract themes/bulma to your Pico themes folder.
+- Extract sample-content to your content folder.
+- Modify your config.yml. Set **theme: bulma**.
 
-[Download](./dist/bulma.zip)
-
-Unzip and copy the complete **bulma** folder into the **public/themes** directory.
-
-Replace the default theme in your **config/config.yml**.
 ```
 theme: bulma
 ```
 
 You will find more detailed information in the Pico CMS [documentation](https://picocms.org/docs/#themes).
-
-
-## Install Project
-
-Installation using Git:
-
-```
-git clone https://github.com/unicate/pico-bulma.git my-project-name
-```
-
-Download PHP dependencies using composer:
-```
-composer install
-```
-
-Now start your webserver and navigate to the public folder.
 
 
 ## Modify & Build Theme
@@ -73,11 +51,12 @@ npm install
 
 To build your theme run gulp <target>:
 
-Usage: gulp [clean | build | bulma-theme-sass | bulma-theme-dist]
-
 ```
 gulp build
 ```
+
+Usage: gulp [clean | build | bulma-theme-sass | bulma-theme-dist]
+
 
 ## Disclaimer & License
 
